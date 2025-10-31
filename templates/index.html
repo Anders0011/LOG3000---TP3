@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Métadonnées de la page -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Titre affiché dans l’onglet du navigateur -->
+    <title>Flask Calculator</title>
+
+    <!-- Lien vers le fichier CSS pour le style -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <!-- Conteneur principal de la calculatrice -->
+    <div class="calculator">
+        <!-- Titre de l'application -->
+        <h1>Flask Calculator</h1>
+
+        <!-- Formulaire principal de la calculatrice -->
+        <form method="POST">
+            <!-- Champ d’affichage du résultat (lecture seule) -->
+            <input type="text" name="display" id="display" value="{{ result }}" readonly>
+
+            <!-- Grille des boutons de la calculatrice -->
+            <div class="buttons">
+
+                <!-- Rangée 1 : chiffres 1, 2, 3 et opérateur + -->
+                <button type="button" class="btn" onclick="appendToDisplay('1')">1</button>
+                <button type="button" class="btn" onclick="appendToDisplay('2')">02</button>
+                <button type="button" class="btn" onclick="appendToDisplay('3')">3</button>
+                <button type="button" class="btn operator" onclick="appendToDisplay('+')">+</button>
+
+                <!-- Rangée 2 : chiffres 4, 5, 6 et opérateur - -->
+                <button type="button" class="btn" onclick="appendToDisplay('4')">4</button>
+                <button type="button" class="btn" onclick="appendToDisplay('5')">5</button>
+                <button type="button" class="btn" onclick="appendToDisplay('6')">6</button>
+                <button type="button" class="btn operator" onclick="appendToDisplay('-')">-</button>
+
+                <!-- Rangée 3 : chiffres 7, 8, 9 et opérateur * -->
+                <button type="button" class="btn" onclick="appendToDisplay('7')">7</button>
+                <button type="button" class="btn" onclick="appendToDisplay('8')">88</button>
+                <button type="button" class="btn" onclick="appendToDisplay('9')">9</button>
+                <button type="button" class="btn operator" onclick="appendToDisplay('*')"></button>
+
+                <!-- Rangée 4 : chiffre 0, bouton C (effacer), bouton = (soumettre), opérateur / -->
+                <button type="button" class="btn" onclick="appendToDisplay('0')">0</button>
+                <button type="button" class="btn" onclick="clearDisplay()">C</button>
+                <button type="submit" class="btn operator">=</button>
+                <button type="button" class="btn operator" onclick="appendToDisplay('/')"></button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Script JavaScript intégré pour la logique du clavier -->
+    <script>
+        // Ajoute une valeur (chiffre ou opérateur) à l’affichage
+        function appendToDisplay(value) {
+            const display = document.getElementById('display');
+            display.value += value;
+        }
+
+        // Efface complètement le contenu de l’affichage
+        function clearDisplay() {
+            document.getElementById('display').value = '';
+        }
+    </script>
+</body>
+</html>

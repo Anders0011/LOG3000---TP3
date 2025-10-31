@@ -1,0 +1,109 @@
+/* ------------------------------
+   Style général du corps de page
+   ------------------------------ */
+body {
+   font-family: Arial, sans-serif;     /* Police de base pour tout le site */
+   background-color: #f0f0f0;          /* Couleur de fond claire */
+   display: flex;                      /* Centre le contenu avec Flexbox */
+   justify-content: center;            /* Centre horizontalement */
+   align-items: center;                /* Centre verticalement */
+   height: 100vh;                      /* Hauteur égale à toute la fenêtre */
+   margin: 0;                          /* Supprime les marges par défaut */
+}
+
+/* ------------------------------
+   Conteneur principal de la calculatrice
+   ------------------------------ */
+.calculator {
+   width: 100%;                        /* S'adapte à la largeur de l'écran */
+   max-width: 600px;                   /* Largeur maximale de la calculatrice */
+   background-color: #333;             /* Fond sombre pour contraster avec le texte */
+   padding: 30px;                      /* Espacement intérieur */
+   border-radius: 15px;                /* Coins arrondis du conteneur */
+   box-shadow: 0px 0px 15px 0px #000;  /* Ombre pour effet de relief */
+   text-align: center;                 /* Centre le contenu à l’intérieur */
+}
+
+/* ------------------------------
+   Titre principal
+   ------------------------------ */
+h1 {
+   color: #fff;                        /* Couleur blanche du texte */
+   margin-bottom: 20px;                /* Espace en dessous du titre */
+   font-size: 36px;                    /* Taille du texte */
+}
+
+/* ------------------------------
+   Zone d'affichage du résultat
+   ------------------------------ */
+#display {
+   width: 100%;                        /* S’étend sur toute la largeur */
+   height: 80px;                       /* Hauteur fixe du champ d'affichage */
+   font-size: 36px;                    /* Taille du texte dans l’écran */
+   text-align: right;                  /* Aligne le texte à droite */
+   padding: 15px;                      /* Espacement interne du champ */
+   margin-bottom: 20px;                /* Espace sous l’écran avant les boutons */
+   border-radius: 10px;                /* Coins arrondis */
+   border: none;                       /* Supprime les bordures */
+   background-color: #222;             /* Fond noir-gris foncé */
+   color: #fff;                        /* Couleur du texte blanche */
+}
+
+/* ------------------------------
+   Grille de disposition des boutons
+   ------------------------------ */
+.buttons {
+   display: grid;                      /* Utilise un affichage en grille */
+   grid-template-columns: repeat(4, 1fr); /* 4 colonnes égales */
+   gap: 15px;                          /* Espacement entre les boutons */
+}
+
+/* ------------------------------
+   Style de base des boutons
+   ------------------------------ */
+.btn {
+   width: 100%;                        /* Chaque bouton occupe sa cellule complète */
+   padding: 30px;                      /* Taille du bouton (intérieure) */
+   font-size: 24px;                    /* Taille du texte */
+   border: none;                       /* Supprime la bordure */
+   border-radius: 10px;                /* Coins arrondis */
+   background-color: #666;             /* Couleur de fond gris moyen */
+   color: #fff;                        /* Texte blanc */
+   cursor: pointer;                    /* Curseur de type "main" */
+   transition: background-color 0.2s;  /* Animation douce lors du survol */
+}
+
+/* ------------------------------
+   Effet au survol des boutons
+   ------------------------------ */
+.btn:hover {
+   background-color: #555;             /* Assombrit légèrement au survol */
+}
+
+/* ------------------------------
+   Style spécifique aux boutons opérateurs
+   ------------------------------ */
+.operator {
+   background-color: #ff9500;          /* Couleur orange pour les opérateurs */
+}
+
+/* ------------------------------
+   Effet au survol des opérateurs
+   ------------------------------ */
+.operator:hover {
+   background-color: #e68a00;          /* Couleur légèrement plus sombre */
+}
+
+/* ------------------------------
+   Effet lors du clic sur un bouton
+   ------------------------------ */
+.btn:active {
+   background-color: #444;             /* Couleur plus foncée quand on clique */
+}
+
+/* ------------------------------
+   Effet lors du clic sur un opérateur
+   ------------------------------ */
+.operator:active {
+   background-color: #cc7a00;          /* Foncé pour indiquer un clic actif */
+}
