@@ -44,7 +44,7 @@ Tests:
 Le dossier /tests contient les fichiers de tests unitaires pour valider les fonctions de calcul et la logique Flask.
 Pour exécuter les tests, utiliser la commande suivante :
 
-pytest
+pytest ou python -m pytest
 
 Les tests couvrent notamment :
 Les opérations arithmétiques (add, subtract, multiply, divide)
