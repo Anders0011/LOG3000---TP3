@@ -23,8 +23,8 @@ def subtract(a,b):
     Retour :
         float : le résultat de a - b.
     """
-    return b - a 
-
+    return a - b 
+# Correction de la fonction substract en inversant les opérandes.
 
 def multiply(a,b): 
     """
