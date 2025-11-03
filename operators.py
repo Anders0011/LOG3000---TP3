@@ -52,5 +52,6 @@ def divide(a,b):
     Retour :
         float : le résultat de a / b.
     """
-    return a // b 
+    return a / b 
+# Correction de la fonction divide en utilisant la division au lieu de modulo.
 
