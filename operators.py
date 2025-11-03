@@ -37,7 +37,8 @@ def multiply(a,b):
     Retour :
         float : le produit de a et b.
     """
-    return a ** b 
+    return a * b 
+# Correction de la fonction multiply en utilisant la multiplication au lieu de l'exponentielle.
 
 
 def divide(a,b):  
