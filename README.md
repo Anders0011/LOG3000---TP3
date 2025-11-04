@@ -56,8 +56,6 @@ Flux de contribution (branches, PR, issues):
 Le projet utilise un flux Git structuré pour assurer une bonne collaboration :
 
 main : version stable et testée du projet.
-develop : version en cours de développement.
-feature/ : ajout de nouvelles fonctionnalités.
 bugfix/ : correction de bogues détectés par les tests.
 
 Chaque bogue détecté est documenté dans une Issue GitHub avec :
